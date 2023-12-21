@@ -21,8 +21,6 @@ router.get("", async (req, res) => {
       .limit(perPage)
       .exec();
 
-    // Count is deprecated - please use countDocuments
-    // const count = await Post.count();
     const count = await Post.countDocuments({});
     const nextPage = parseInt(page) + 1;
     const hasNextPage = nextPage <= Math.ceil(count / perPage);
@@ -38,21 +36,6 @@ router.get("", async (req, res) => {
     console.log(error);
   }
 });
-
-// router.get('', async (req, res) => {
-//   const locals = {
-//     title: "NodeJs Blog",
-//     description: "Simple Blog created with NodeJs, Express & MongoDb."
-//   }
-
-//   try {
-//     const data = await Post.find();
-//     res.render('index', { locals, data });
-//   } catch (error) {
-//     console.log(error);
-//   }
-
-// });
 
 /**
  * GET /
