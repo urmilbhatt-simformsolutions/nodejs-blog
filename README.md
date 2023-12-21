@@ -1,6 +1,6 @@
 # NodeJS Blog
 
-![alt text](/nodejs-blog-demo-video.mp4?raw=true)
+![alt text](/nodejs-blog-demo-image.jpg?raw=true)
 
 ## You need:
 - NodeJs
